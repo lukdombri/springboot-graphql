@@ -1,0 +1,26 @@
+type Query{
+    projects: [Project]
+    projectById(id:ID!): Project
+}
+
+type Mutation{
+    addPerson(
+    person: PersonInput
+    ): Person
+
+    addProject(
+        project: ProjectInput
+    ): Project
+}
+
+#Input types
+input PersonInput{
+    name: String!
+    lastname: String!
+    originCountry: String
+    project: ProjectInput
+}
+
+input ProjectInput{
+    name: String!
+}

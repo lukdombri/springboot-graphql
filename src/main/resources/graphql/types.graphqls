@@ -1,0 +1,14 @@
+#Regular types
+type Person{
+    id: ID!
+    name: String!
+    lastname: String!
+    originCountry: String
+    project: Project
+}
+
+type Project{
+    id: ID!
+    name: String!
+    members: [Person]
+}
